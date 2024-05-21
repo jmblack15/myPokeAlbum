@@ -1,0 +1,29 @@
+<header class="header-mobile">
+
+  <a routerLink=''>
+    <img src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="logo">
+  </a>
+
+  <div class="button_burguer_container" [class.active_burguer]="isNavMobileActive" (click)="toggleNavMobile()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav class="navbar_mobile" [class.active]="isNavMobileActive">
+    <ul>
+      <li>
+        <a routerLink="/album" (click)="toggleNavMobile()">
+          <img src="/assets/pokeball.png" alt="album">
+          <p>My album</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="sheets" (click)="toggleNavMobile()">
+          <img src="/assets/avatar.png" alt="sheet">
+          <p>Obtain Sheets</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
